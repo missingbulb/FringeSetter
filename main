@@ -6,20 +6,10 @@ from datetime import datetime, timedelta
 
 # User inputs
 EDFRINGE_URL = "https://tickets.edfringe.com/"
-USERNAME = "your_email"
-PASSWORD = "your_password"
 TRIP_START = datetime(2025, 8, 1)
 TRIP_END = datetime(2025, 8, 10)
 
 driver = webdriver.Chrome()
-
-def login():
-    driver.get(EDFRINGE_URL + "login")
-    time.sleep(2)
-    driver.find_element(By.ID, "username").send_keys(USERNAME)
-    driver.find_element(By.ID, "password").send_keys(PASSWORD)
-    driver.find_element(By.ID, "login-button").click()
-    time.sleep(2)
 
 def get_favorites():
     driver.get(EDFRINGE_URL + "my-favourites")
@@ -53,7 +43,7 @@ def bookmark_instance(row_element):
         print("Bookmark failed:", e)
 
 def main():
-    login()
+    // assuming I'm logged in
     favorites = get_favorites()
     scheduled = []
     for show_url in favorites:
