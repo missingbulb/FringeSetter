@@ -6,8 +6,8 @@ from datetime import datetime, timedelta
 
 # User inputs
 EDFRINGE_URL = "https://tickets.edfringe.com/"
-TRIP_START = datetime(2025, 8, 1)
-TRIP_END = datetime(2025, 8, 10)
+TRIP_START = datetime(2025, 8, 12)
+TRIP_END = datetime(2025, 8, 25)
 
 driver = webdriver.Chrome()
 
